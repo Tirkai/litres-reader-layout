@@ -1,0 +1,124 @@
+
+
+@color-orange: #FF4C00;
+@color-grey: #3B393F;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   // box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+body{
+    font-family: 'PT Sans', sans-serif;
+}
+
+html,body{
+    overflow-x: hidden;
+}
+.wrapper{
+    width: 1110px;
+    margin: 0 auto;
+}
+.link{
+    text-decoration: none;
+    &:hover{
+        color: @color-orange;
+    }
+}
+.button{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 15px 30px;
+    background: @color-orange;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    &--large{
+        font-size: 24px;
+        padding: 24px 45px;
+    }
+    &--white{
+        background: white;
+        color: @color-orange;
+    }
+}
+.section-title{
+    font-size: 52px;
+    text-align: center;
+}
+.header{
+    &__wrapper{
+        width: 1540px;
+    }
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+    }
+    &__logo{
+        &__image{
+            width: 230px;
+        }
+    }
+    &__nav{
+        display: flex;
+    }
+    &__menu{
+        display: flex;
+        &__item{
+            padding: 0 30px;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: @color-grey;
+            font-weight: bold;
+            font-size: 15px;
+            &:hover{
+                color: @color-orange;
+            }
+        }
+    }
+    &__account{
+        display: flex;
+        margin-left: 45px;
+        &__item{
+            display: flex;
+            color: rgb(59, 57, 63);
+            &:not(:last-child):after{
+                display: block;
+                padding: 0 10px;
+                content: '|';
+            }
+        }
+    }
+}
+.main-page{
+    margin-bottom: 150px;
+    &__preview{
+        background: url('/dist/img/main-bg.jpg') no-repeat;
+        background-position: center;
+        &__container{
+            display: flex;
+            justify-content: flex-end;
+            min-height: 890px;
+        }
+        &__content{
+            padding: 100px 0;
+            width: 490px;
+            color: white;
+        }
+        &__title{
+            font-size: 52px;
+            margin-bottom: 30px;
+            line-height: 1em;
+        }
+        &__description{
+            font-size: 22px;
+            line-height: 1.4em;
+            margin-bottom: 35px;
+        }
+    }
+}

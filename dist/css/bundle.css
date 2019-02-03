@@ -1,0 +1,117 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'PT Sans', sans-serif;
+}
+html,
+body {
+  overflow-x: hidden;
+}
+.wrapper {
+  width: 1110px;
+  margin: 0 auto;
+}
+.link {
+  text-decoration: none;
+}
+.link:hover {
+  color: #FF4C00;
+}
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 15px 30px;
+  background: #FF4C00;
+  font-size: 18px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.button--large {
+  font-size: 24px;
+  padding: 24px 45px;
+}
+.button--white {
+  background: white;
+  color: #FF4C00;
+}
+.section-title {
+  font-size: 52px;
+  text-align: center;
+}
+.header__wrapper {
+  width: 1540px;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+.header__logo__image {
+  width: 230px;
+}
+.header__nav {
+  display: flex;
+}
+.header__menu {
+  display: flex;
+}
+.header__menu__item {
+  padding: 0 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #3B393F;
+  font-weight: bold;
+  font-size: 15px;
+}
+.header__menu__item:hover {
+  color: #FF4C00;
+}
+.header__account {
+  display: flex;
+  margin-left: 45px;
+}
+.header__account__item {
+  display: flex;
+  color: #3b393f;
+}
+.header__account__item:not(:last-child):after {
+  display: block;
+  padding: 0 10px;
+  content: '|';
+}
+.main-page {
+  margin-bottom: 150px;
+}
+.main-page__preview {
+  background: url('/dist/img/main-bg.jpg') no-repeat;
+  background-position: center;
+}
+.main-page__preview__container {
+  display: flex;
+  justify-content: flex-end;
+  min-height: 890px;
+}
+.main-page__preview__content {
+  padding: 100px 0;
+  width: 490px;
+  color: white;
+}
+.main-page__preview__title {
+  font-size: 52px;
+  margin-bottom: 30px;
+  line-height: 1em;
+}
+.main-page__preview__description {
+  font-size: 22px;
+  line-height: 1.4em;
+  margin-bottom: 35px;
+}
+
+/*# sourceMappingURL=bundle.css.map*/
