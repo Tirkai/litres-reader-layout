@@ -9,7 +9,7 @@
    // box-shadow: 0 0 15px rgba(0,0,0,0.3);
 }
 body{
-    font-family: 'PT Sans', sans-serif;
+    font: 15px/1.4 'PT Sans', sans-serif;
 }
 
 html,body{
@@ -24,6 +24,10 @@ html,body{
     &:hover{
         color: @color-orange;
     }
+}
+.p{
+    line-height: 1.4em;
+    margin-bottom: 0.65em;
 }
 .button{
     display: inline-flex;
@@ -46,8 +50,10 @@ html,body{
     }
 }
 .section-title{
-    font-size: 52px;
+    font-size: 46px;
     text-align: center;
+    color: @color-grey;
+    font-weight: bold;
 }
 .header{
     &__wrapper{
@@ -96,10 +102,10 @@ html,body{
     }
 }
 .main-page{
-    margin-bottom: 150px;
     &__preview{
         background: url('/dist/img/main-bg.jpg') no-repeat;
         background-position: center;
+        margin-bottom: 130px;
         &__container{
             display: flex;
             justify-content: flex-end;
@@ -119,6 +125,41 @@ html,body{
             font-size: 22px;
             line-height: 1.4em;
             margin-bottom: 35px;
+        }
+    }
+    &__about{
+        margin-bottom: 110px;
+        &__title{
+            margin-bottom: 90px;
+        }
+        &__columns{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 70px;
+        }
+        &__column{
+
+        }
+        &__card{
+            &__title{
+                display: flex;
+                align-items: center;
+                &__icon{
+                    margin-right: 20px;
+                    & img{
+                        width: 24px;
+                    }
+                }
+                &__text{
+                    font-size: 26px;
+                    color: @color-orange;
+                    font-weight: bold;
+                }
+            }
+            &__content{
+                padding: 20px 0;
+                color: @color-grey;
+            }
         }
     }
 }
