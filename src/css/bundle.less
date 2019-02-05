@@ -55,6 +55,9 @@ html,body{
     color: @color-grey;
     font-weight: bold;
 }
+.color-orange{
+    color: @color-orange;
+}
 .header{
     &__wrapper{
         width: 1540px;
@@ -162,4 +165,82 @@ html,body{
             }
         }
     }
+    &__steps{
+        background: #EFEEE9;
+        margin-bottom: 100px;
+        &__container{
+            padding: 100px 0;
+        }
+        &__title{
+            margin-bottom: 110px;
+        }
+        &__grid{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 50px;
+        }
+        &__item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &__icon{
+                margin-bottom: 30px;
+            }
+            &__content{
+                font-size: 22px;
+                text-align: center;
+            }
+        }
+    }
+    &__our-friends{
+        margin-bottom: 100px;
+        &__slider{
+            &__container{
+                width: max-content;
+                overflow: hidden;
+            }
+            &__content{
+                display: grid;
+                grid-template-columns: repeat(6, 330px);
+                grid-gap: 75px;
+            }
+            &__item{
+                &__image{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 330px;
+                    height: 170px;
+                    margin-bottom: 25px;
+                }
+                &__text{
+                    color: @color-grey;
+                }
+            }
+        }
+    }
+    &__you-resolve{
+        background: #EFEEE9;
+        &__container{
+            padding: 100px 0;
+        }
+        &__title{
+            color: @color-orange;
+            margin-bottom: 20px;
+        }
+        &__description{
+            display: flex;
+            justify-content: center;
+            color: @color-grey;
+            font-size: 22px;
+            margin-bottom: 45px;
+        }
+        &__action{
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+.footer{
+
 }
