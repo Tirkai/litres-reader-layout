@@ -39,10 +39,12 @@ html,body{
     font-size: 18px;
     text-transform: uppercase;
     border-radius: 5px;
+    height: 50px;
     cursor: pointer;
     &--large{
         font-size: 24px;
-        padding: 24px 45px;
+        padding: auto 45px;
+        height: 64px;
     }
     &--white{
         background: white;
@@ -148,6 +150,8 @@ html,body{
                 display: flex;
                 align-items: center;
                 &__icon{
+                    display: flex;
+                    align-items: center;
                     margin-right: 20px;
                     & img{
                         width: 24px;
@@ -196,15 +200,66 @@ html,body{
         margin-bottom: 100px;
         &__slider{
             &__container{
-                width: max-content;
-                overflow: hidden;
+                position: relative;
+                padding-bottom: 30px;
+                user-select: none;
+                & .tns-outer{
+                    overflow: hidden;
+                }
+                & .tns-controls{
+                    position: absolute;
+                    top: 45%;
+                    width: 120%;
+                    left: -10%;
+                    display: flex;
+                    justify-content: space-between;
+                    outline: none;
+                    & .invert{
+                        transform: rotate(180deg);
+                    }
+                    & button{
+                        padding: 0;
+                        background: none;
+                        border: none;
+                        width: 24px;
+                        outline: none;
+                        cursor: pointer;
+                        transition: ease 0.3s;
+                        &:hover{
+                            opacity: 0.8;
+                        }
+                    }
+                }
+                & .tns-liveregion{
+                    display: none;
+                }
+                & .tns-nav{
+                    position: absolute;
+                    bottom: 0;
+                    display: grid;
+                    justify-content: center;
+                    grid-template-columns: repeat(auto-fit, 8px);
+                    grid-gap: 12px;
+                    width: 100%;
+                    & button{
+                        border-radius: 50%;
+                        border: none;
+                        width: 8px;
+                        height: 8px;
+                        background-color: #d2d0c8;
+                        outline: none;
+                        &.tns-nav-active{
+                            background-color: #ff4c00;
+                        }
+                    }
+                }
             }
+            
             &__content{
-                display: grid;
-                grid-template-columns: repeat(6, 330px);
-                grid-gap: 75px;
+                display: flex;
             }
             &__item{
+                padding: 0 37px;
                 &__image{
                     display: flex;
                     justify-content: center;

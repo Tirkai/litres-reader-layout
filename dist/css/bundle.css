@@ -34,11 +34,13 @@ body {
   font-size: 18px;
   text-transform: uppercase;
   border-radius: 5px;
+  height: 50px;
   cursor: pointer;
 }
 .button--large {
   font-size: 24px;
-  padding: 24px 45px;
+  padding: auto 45px;
+  height: 64px;
 }
 .button--white {
   background: white;
@@ -136,6 +138,8 @@ body {
   align-items: center;
 }
 .main-page__about__card__title__icon {
+  display: flex;
+  align-items: center;
   margin-right: 20px;
 }
 .main-page__about__card__title__icon img {
@@ -181,13 +185,65 @@ body {
   margin-bottom: 100px;
 }
 .main-page__our-friends__slider__container {
-  width: max-content;
+  position: relative;
+  padding-bottom: 30px;
+  user-select: none;
+}
+.main-page__our-friends__slider__container .tns-outer {
   overflow: hidden;
 }
-.main-page__our-friends__slider__content {
+.main-page__our-friends__slider__container .tns-controls {
+  position: absolute;
+  top: 45%;
+  width: 120%;
+  left: -10%;
+  display: flex;
+  justify-content: space-between;
+  outline: none;
+}
+.main-page__our-friends__slider__container .tns-controls .invert {
+  transform: rotate(180deg);
+}
+.main-page__our-friends__slider__container .tns-controls button {
+  padding: 0;
+  background: none;
+  border: none;
+  width: 24px;
+  outline: none;
+  cursor: pointer;
+  transition: ease 0.3s;
+}
+.main-page__our-friends__slider__container .tns-controls button:hover {
+  opacity: 0.8;
+}
+.main-page__our-friends__slider__container .tns-liveregion {
+  display: none;
+}
+.main-page__our-friends__slider__container .tns-nav {
+  position: absolute;
+  bottom: 0;
   display: grid;
-  grid-template-columns: repeat(6, 330px);
-  grid-gap: 75px;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 8px);
+  grid-gap: 12px;
+  width: 100%;
+}
+.main-page__our-friends__slider__container .tns-nav button {
+  border-radius: 50%;
+  border: none;
+  width: 8px;
+  height: 8px;
+  background-color: #d2d0c8;
+  outline: none;
+}
+.main-page__our-friends__slider__container .tns-nav button.tns-nav-active {
+  background-color: #ff4c00;
+}
+.main-page__our-friends__slider__content {
+  display: flex;
+}
+.main-page__our-friends__slider__item {
+  padding: 0 37px;
 }
 .main-page__our-friends__slider__item__image {
   display: flex;
