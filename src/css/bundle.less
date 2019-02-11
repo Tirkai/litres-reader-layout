@@ -20,9 +20,10 @@ html,body{
     margin: 0 auto;
 }
 .link{
+    color: @color-orange;
     text-decoration: none;
     &:hover{
-        color: @color-orange;
+        color: darken(@color-orange, 10%);
     }
 }
 .p{
@@ -45,6 +46,10 @@ html,body{
         font-size: 24px;
         padding: auto 45px;
         height: 64px;
+    }
+    &--small{
+        height: 40px;
+        font-size: 14px;
     }
     &--white{
         background: white;
@@ -77,6 +82,11 @@ html,body{
     }
     &__nav{
         display: flex;
+        align-items: center;
+        height: 100%;
+    }
+    &__nav-mobile{
+        display: none;
     }
     &__menu{
         display: flex;
@@ -94,14 +104,50 @@ html,body{
     }
     &__account{
         display: flex;
+        align-items: center;
+        position: relative;
         margin-left: 45px;
+        height: 100%;
+        &.active{
+            background: #EFEEE9;
+        }
         &__item{
             display: flex;
             color: rgb(59, 57, 63);
-            &:not(:last-child):after{
+            padding: 0 15px;
+        }
+        &__dropdown{
+            position: absolute;
+            top: 100%;
+            right: 0;
+            display: none;
+            background: #efeee9;
+            width: 375px;
+            &.active{
                 display: block;
-                padding: 0 10px;
-                content: '|';
+            }
+            &__container{
+                padding: 30px;
+            }
+            &__title{
+                color: #3b393f;
+                font-size: 24px;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+            &__input{
+                width: 100%;
+                height: 50px;
+                margin-bottom: 10px;
+                border-radius: 4px;
+                border: 1px solid #e7e5dd;
+                background-color: #ffffff;
+                padding: 10px;
+            }
+            &__actions{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
             }
         }
     }
@@ -259,6 +305,9 @@ html,body{
                 display: flex;
             }
             &__item{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
                 padding: 0 37px;
                 &__image{
                     display: flex;
@@ -297,5 +346,259 @@ html,body{
     }
 }
 .footer{
-
+    & a.link{
+        color: @color-orange;
+    }
+    &__wrapper{
+        width: 1540px;
+    }
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+        color: #757478;
+    }
+    &__logo{
+        margin-right: 80px;
+        &__image{
+            width: 230px;
+        }
+    }
+    &__left-column{
+        display: flex;
+    }
+    &__right-column{
+        display: flex;
+        flex-grow: 1;
+        justify-content: flex-end;
+    }
+    &__social{
+        display: flex;
+        align-items: center;
+        &__text{
+            margin-right: 30px;
+        }
+        &__items{
+            display: flex;
+            align-items: center;
+        }
+        &__item{
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+    }
+    &__menu{
+        display: flex;
+        &__item{
+            padding: 0 30px;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: @color-grey;
+            font-weight: bold;
+            font-size: 15px;
+            &:hover{
+                color: @color-orange;
+            }
+        }
+    }
+    &__account{
+        display: flex;
+        margin-left: 45px;
+        &__item{
+            display: flex;
+            color: rgb(59, 57, 63);
+            &:not(:last-child):after{
+                display: block;
+                padding: 0 10px;
+                content: '|';
+            }
+        }
+    }
+}
+@media screen and (max-width: 1540px){
+    .header{
+        &__wrapper{
+            padding: 0 10px;
+            width: 100%;
+        }
+    }
+    .footer{
+        &__wrapper{
+            padding: 0 10px;
+            width: 100%;
+        }
+    }
+}
+@media screen and (max-width: 1100px){
+    .wrapper{
+        width: 100%;
+        padding: 0 15px;
+    }
+    .main-page{
+        &__steps{
+            &__grid{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+    .footer{
+        &__container{
+            flex-direction: column;
+            height: auto;
+        }
+    }
+}
+@media screen and (max-width: 1024px){
+    .header{
+        &__container{
+            position: relative;
+            height: auto;
+        }
+        &__logo{
+            &__image{
+                width: 180px;
+            }
+        }
+        &__menu{
+            &__item{
+                padding: 0 10px;
+            }
+        }
+    }
+    .section-title{
+        font-size: 36px;
+    }
+    .main-page{
+        &__preview{
+            color: @color-orange;
+            background: none;
+            margin: 0;
+            &__mobile-bg{
+                background-image: url('/dist/img/main-bg.jpg');
+                background-position: left bottom;
+                background-size: cover;
+                height: 250px;
+            }
+            &__container{
+                min-height: auto;
+            }
+            &__title{
+                color: @color-orange;
+                font-size: 36px;
+                text-align: center;
+            }
+            &__description{
+                color: @color-grey;
+                text-align: center;
+                font-size: 15px;
+            }
+            &__action{
+                display: flex;
+                justify-content: center;
+                & .button{
+                    background: #FF4C00;
+                    color: white;
+                }
+            }
+            &__content{
+                padding: 20px;
+                width: auto;
+            }
+        }
+        &__about{
+            &__columns{
+                grid-template-columns: repeat(1, 1fr);
+                grid-gap: 0;
+            }
+        }
+    }
+    .footer{
+        &__container{
+            align-items: flex-start;
+        }
+        &__left-column{
+            flex-direction: column;
+        }
+        &__social{
+            padding: 20px 0;
+        }
+    }
+}
+@media screen and (max-width: 768px){
+    .header{
+        &__container{
+            height: 50px;
+        }
+        &__nav-mobile{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right: -15px;
+            top: 0;
+            height: 50px;
+            width: 50px;
+            &.active{
+                background: #efeee9;
+            }
+        }
+        &__nav{
+            display: none;
+            position: absolute;
+            top: 100%;
+            margin: 0 -15px;
+            width: calc(100% + 30px);
+            background-color: #efeee9;
+            flex-direction: column;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+            height: auto;
+            &.active{
+                display: flex;
+            }
+        }
+        &__menu{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            &__item{
+                padding: 20px;
+            }
+        }
+        &__account{
+            display: flex;
+            margin: 0;
+            padding: 10px;
+            width: 100%;
+            justify-content: center;
+            &__dropdown{
+                width: 100%;
+            }
+        }
+        
+    }
+    .main-page{
+        &__steps{
+            &__grid{
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+        &__our-friends{
+            &__slider{
+                &__container{
+                    & .tns-controls{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .footer{
+        &__container{
+            padding: 20px 0;
+        }
+    }
 }

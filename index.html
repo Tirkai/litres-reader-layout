@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="/dist/css/bundle.css">
+    <link rel="stylesheet" href="dist/css/bundle.css">
     <title>Document</title>
 </head>
 
@@ -16,7 +16,7 @@
             <div class="wrapper header__wrapper">
                 <div class="header__container">
                     <div class="header__logo">
-                        <img src="/dist/img/logo.svg" class="header__logo__image" alt="">
+                        <img src="dist/img/logo.svg" class="header__logo__image" alt="">
                     </div>
                     <div class="header__nav">
                         <div class="header__menu">
@@ -26,15 +26,53 @@
                             <a class="link header__menu__item" href="#">Договор</a>
                         </div>
                         <div class="header__account">
-                            <a class="link header__account__item" href="#">Вход</a>
-                            <a class="link header__account__item" href="#">Регистрация</a>
+                            <a class="link header__account__item js-login-dropdown-button" href="#">Вход</a>
+                            <a class="link header__account__item js-register-dropdown-button" href="#">Регистрация</a>
+                            <div class="header__account__dropdown js-login-form">
+                                <div class="header__account__dropdown__container">
+                                    <div class="header__account__dropdown__title">
+                                        Войти
+                                    </div>
+                                    <div class="header__account__dropdown__content">
+                                        <input type="text" class="header__account__dropdown__input" placeholder="E-mail">
+                                        <input type="text" class="header__account__dropdown__input" placeholder="Пароль">
+                                        <div class="header__account__dropdown__actions">
+                                            <div class="button button--small">
+                                                Войти
+                                            </div>
+                                            <a href="#" class="link">Забыли пароль</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header__account__dropdown js-register-form">
+                                    <div class="header__account__dropdown__container">
+                                        <div class="header__account__dropdown__title">
+                                            Регистрация
+                                        </div>
+                                        <div class="header__account__dropdown__content">
+                                            <input type="text" class="header__account__dropdown__input" placeholder="E-mail">
+                                            <input type="text" class="header__account__dropdown__input" placeholder="Пароль">
+                                            <div class="header__account__dropdown__actions">
+                                                <div class="button button--small">
+                                                    Войти
+                                                </div>
+                                                <a href="#" class="link">Уже зарегистрированы</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                         </div>
+                    </div>
+                    <div class="header__nav-mobile">
+                        <img src="dist/img/menu.png" alt="">
                     </div>
                 </div>
             </div>
         </header>
         <section class="main-page">
             <div class="main-page__preview">
+                <div class="main-page__preview__mobile-bg"></div>
                 <div class="wrapper">
                     <div class="main-page__preview__container">
                         <div class="main-page__preview__content">
@@ -65,7 +103,7 @@
                                 <div class="main-page__about__card">
                                     <div class="main-page__about__card__title">
                                         <div class="main-page__about__card__title__icon">
-                                            <img src="/dist/img/arrow-right.svg" alt="">
+                                            <img src="dist/img/arrow-right.svg" alt="">
                                         </div>
                                         <div class="main-page__about__card__title__text">
                                             Зачем мне участвовать в проекте?
@@ -93,7 +131,7 @@
                                 <div class="main-page__about__card">
                                     <div class="main-page__about__card__title">
                                         <div class="main-page__about__card__title__icon">
-                                            <img src="/dist/img/arrow-right.svg" alt="">
+                                            <img src="dist/img/arrow-right.svg" alt="">
                                         </div>
                                         <div class="main-page__about__card__title__text">
                                             Я могу озвучить любую книгу?
@@ -116,7 +154,7 @@
                                 <div class="main-page__about__card">
                                     <div class="main-page__about__card__title">
                                         <div class="main-page__about__card__title__icon">
-                                            <img src="/dist/img/arrow-right.svg" alt="">
+                                            <img src="dist/img/arrow-right.svg" alt="">
                                         </div>
                                         <div class="main-page__about__card__title__text">
                                             Сколько я могу заработать?
@@ -138,7 +176,7 @@
                                 <div class="main-page__about__card">
                                     <div class="main-page__about__card__title">
                                         <div class="main-page__about__card__title__icon">
-                                            <img src="/dist/img/arrow-right.svg" alt="">
+                                            <img src="dist/img/arrow-right.svg" alt="">
                                         </div>
                                         <div class="main-page__about__card__title__text">
                                             Как стать успешным чтецом?
@@ -172,7 +210,7 @@
                         <div class="main-page__steps__grid">
                             <div class="main-page__steps__item">
                                 <div class="main-page__steps__item__icon">
-                                    <img src="/dist/img/step-1.png" alt="">
+                                    <img src="dist/img/step-1.png" alt="">
                                 </div>
                                 <div class="main-page__steps__item__content">
                                     <div class="button">
@@ -182,7 +220,7 @@
                             </div>
                             <div class="main-page__steps__item">
                                 <div class="main-page__steps__item__icon">
-                                    <img src="/dist/img/step-2.png" alt="">
+                                    <img src="dist/img/step-2.png" alt="">
                                 </div>
                                 <div class="main-page__steps__item__content">
                                     Пройдите тестовое задание
@@ -190,16 +228,16 @@
                             </div>
                             <div class="main-page__steps__item">
                                 <div class="main-page__steps__item__icon">
-                                    <img src="/dist/img/step-3.png" alt="">
+                                    <img src="dist/img/step-3.png" alt="">
                                 </div>
                                 <div class="main-page__steps__item__content">
-                                    Запишите 3 книги в период с 1 февраля по 
+                                    Запишите 3 книги в период с 1 февраля по
                                     июля 2019 года
                                 </div>
                             </div>
                             <div class="main-page__steps__item">
                                 <div class="main-page__steps__item__icon">
-                                    <img src="/dist/img/step-4.png" alt="">
+                                    <img src="dist/img/step-4.png" alt="">
                                 </div>
                                 <div class="main-page__steps__item__content">
                                     Лучших чтецов выберут жюри премии в декабре 2019 года
@@ -219,62 +257,74 @@
                         </div>
                         <div class="main-page__our-friends__slider">
                             <div class="main-page__our-friends__slider__controls">
-                                
+
                             </div>
                             <div class="main-page__our-friends__slider__container">
                                 <div class="main-page__our-friends__slider__content js-carousel">
                                     <div class="main-page__our-friends__slider__item">
                                         <div class="main-page__our-friends__slider__item__image">
-                                            <img src="/dist/img/partner-1.png" alt="">
+                                            <img src="dist/img/partner-1.png" alt="">
                                         </div>
                                         <div class="main-page__our-friends__slider__item__text">
-                                            Градиенты были модны некоторое время назад. Сайт Spotify снова сделал их популярными,
-                                            использовав градиенты duotone на фотографиях как характерный элемент бренда.
+                                            Градиенты были модны некоторое время назад. Сайт Spotify снова сделал их
+                                            популярными,
+                                            использовав градиенты duotone на фотографиях как характерный элемент
+                                            бренда.
                                         </div>
                                     </div>
                                     <div class="main-page__our-friends__slider__item">
                                         <div class="main-page__our-friends__slider__item__image">
-                                            <img src="/dist/img/partner-2.png" alt="">
+                                            <img src="dist/img/partner-2.png" alt="">
                                         </div>
                                         <div class="main-page__our-friends__slider__item__text">
-                                            Градиенты были модны некоторое время назад. Сайт Spotify снова сделал их популярными,
-                                            использовав градиенты duotone на фотографиях как характерный элемент бренда.
+                                            Градиенты были модны некоторое время назад. Сайт Spotify снова сделал их
+                                            популярными,
+                                            использовав градиенты duotone на фотографиях как характерный элемент
+                                            бренда.
                                         </div>
                                     </div>
                                     <div class="main-page__our-friends__slider__item">
                                         <div class="main-page__our-friends__slider__item__image">
-                                            <img src="/dist/img/partner-3.png" alt="">
+                                            <img src="dist/img/partner-3.png" alt="">
                                         </div>
                                         <div class="main-page__our-friends__slider__item__text">
-                                            Градиенты были модны некоторое время назад. Сайт Spotify снова сделал их популярными,
-                                            использовав градиенты duotone на фотографиях как характерный элемент бренда.
+                                            Градиенты были модны некоторое время назад. Сайт Spotify снова сделал их
+                                            популярными,
+                                            использовав градиенты duotone на фотографиях как характерный элемент
+                                            бренда.
                                         </div>
                                     </div>
                                     <div class="main-page__our-friends__slider__item">
                                         <div class="main-page__our-friends__slider__item__image">
-                                            <img src="/dist/img/partner-3.png" alt="">
+                                            <img src="dist/img/partner-3.png" alt="">
                                         </div>
                                         <div class="main-page__our-friends__slider__item__text">
-                                            Градиенты были модны некоторое время назад. Сайт Spotify снова сделал их популярными,
-                                            использовав градиенты duotone на фотографиях как характерный элемент бренда.
+                                            Градиенты были модны некоторое время назад. Сайт Spotify снова сделал их
+                                            популярными,
+                                            использовав градиенты duotone на фотографиях как характерный элемент
+                                            бренда.
                                         </div>
                                     </div>
                                     <div class="main-page__our-friends__slider__item">
                                         <div class="main-page__our-friends__slider__item__image">
-                                            <img src="/dist/img/partner-3.png" alt="">
+                                            <img src="dist/img/partner-3.png" alt="">
                                         </div>
                                         <div class="main-page__our-friends__slider__item__text">
-                                            Градиенты были модны некоторое время назад. Сайт Spotify снова сделал их популярными,
-                                            использовав градиенты duotone на фотографиях как характерный элемент бренда.
+                                            Градиенты были модны некоторое время назад. Сайт Spotify снова сделал их
+                                            популярными,
+                                            использовав градиенты duotone на фотографиях как характерный элемент
+                                            бренда.
                                         </div>
                                     </div>
                                     <div class="main-page__our-friends__slider__item">
                                         <div class="main-page__our-friends__slider__item__image">
-                                            <img src="/dist/img/partner-3.png" alt="">
+                                            <img src="dist/img/partner-3.png" alt="">
                                         </div>
                                         <div class="main-page__our-friends__slider__item__text">
-                                            Градиенты были модны некоторое время назад. Сайт Spotify снова сделал их популярными,
-                                            использовав градиенты duotone на фотографиях как характерный элемент бренда.
+                                            Градиенты были модны некоторое время назад. Сайт Spotify снова сделал их
+                                            популярными,
+                                            использовав градиенты duotone на фотографиях как характерный элемент
+                                            бренда.
                                         </div>
                                     </div>
                                 </div>
@@ -303,30 +353,46 @@
                 </div>
             </div>
         </section>
-        <footer class="header footer">
-            <div class="wrapper header__wrapper">
-                <div class="header__container">
-                    <div class="header__logo">
-                        <img src="/dist/img/logo.svg" class="header__logo__image" alt="">
+        <footer class="footer">
+            <div class="wrapper footer__wrapper">
+                <div class="footer__container">
+                    <div class="footer__left-column">
+                        <div class="footer__logo">
+                            <img src="dist/img/logo.svg" class="footer__logo__image" alt="">
+                        </div>
+                        <div class="footer__social">
+                            <div class="footer__social__text">
+                                Мы в социальных сетях:
+                            </div>
+                            <div class="footer__social__items">
+                                <a href="#" class="footer__social__item">
+                                    <img src="dist/img/icon-fb.png" alt="">
+                                </a>
+                                <a href="#" class="footer__social__item">
+                                    <img src="dist/img/icon-vk.png" alt="">
+                                </a>
+                                <a href="#" class="footer__social__item">
+                                    <img src="dist/img/icon-instagram.png" alt="">
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="header__nav">
-                        <div class="header__menu">
-                            <a class="link header__menu__item" href="#">Главная</a>
-                            <a class="link header__menu__item" href="#">Мои книги</a>
-                            <a class="link header__menu__item" href="#">Каталог книг</a>
-                            <a class="link header__menu__item" href="#">Договор</a>
+                    <div class="footer__right-column">
+                        <div class="footer__any-questions">
+                            Если у вас возникли сложности или вопросы,<br>
+                            пожалуйста, напишите нам на адрес <a class="link" href="mailto:reader@litres.ru">reader@litres.ru</a>
                         </div>
-                        <div class="header__account">
-                            <a class="link header__account__item" href="#">Вход</a>
-                            <a class="link header__account__item" href="#">Регистрация</a>
-                        </div>
+                    </div>
+
+                    <div class="footer__nav">
+
                     </div>
                 </div>
             </div>
         </footer>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/min/tiny-slider.js"></script>
-    <script src="/dist/js/bundle.js"></script>
+    <script src="dist/js/bundle.js"></script>
 </body>
 
 </html>
