@@ -53,14 +53,13 @@ class DropdownMenu{
     }
     open = () => {
         this.state.isOpen = true;
-        this.changeVisibility(this.state.isOpen);
         const group = this.state.group;
-        console.log(group);
         if(group.length){
             group.forEach(item => {
                 if(item !== this) item.close();
             });
         }
+        this.changeVisibility(this.state.isOpen);
     }
     close = () => {
         this.state.isOpen = false;

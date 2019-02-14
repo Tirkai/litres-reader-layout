@@ -9,7 +9,7 @@
    // box-shadow: 0 0 15px rgba(0,0,0,0.3);
 }
 body{
-    font: 15px/1.4 'PT Sans', sans-serif;
+    font: 15px/1.4 'Arial', sans-serif;
 }
 
 html,body{
@@ -34,6 +34,7 @@ html,body{
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    font-family: Arial, sans-serif;
     color: white;
     padding: 15px 30px;
     background: @color-orange;
@@ -42,6 +43,11 @@ html,body{
     border-radius: 5px;
     height: 50px;
     cursor: pointer;
+    font-weight: bold;
+    transition: ease 0.3s;
+    &:hover{
+        background: #CC3C00;
+    }
     &--large{
         font-size: 24px;
         padding: auto 45px;
@@ -54,9 +60,24 @@ html,body{
     &--white{
         background: white;
         color: @color-orange;
+        &:hover{
+            background: darken(white, 10%);
+        }
+    }
+    &--outline{
+        border: 2px solid @color-orange;
+        color: @color-orange;
+        background-color: #ffffff;
+        &:hover{
+            background: darken(white, 10%);
+        }
+    }
+    &--small-bound{
+        padding: 0 15px;
     }
 }
 .section-title{
+    font-family: 'PT Sans',sans-serif;
     font-size: 46px;
     text-align: center;
     color: @color-grey;
@@ -123,6 +144,9 @@ html,body{
             display: none;
             background: #efeee9;
             width: 375px;
+            border-radius: 0 0 4px 4px;
+            overflow: hidden;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
             &.active{
                 display: block;
             }
@@ -130,6 +154,7 @@ html,body{
                 padding: 30px;
             }
             &__title{
+                font-family: 'PT Sans',sans-serif;
                 color: #3b393f;
                 font-size: 24px;
                 font-weight: bold;
@@ -148,6 +173,11 @@ html,body{
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+            }
+            &__desc{
+                font-size: 12px;
+                color: #757478;
+                margin-bottom: 10px;
             }
         }
     }
@@ -168,6 +198,7 @@ html,body{
             color: white;
         }
         &__title{
+            font-family: 'PT Sans',sans-serif;
             font-size: 52px;
             margin-bottom: 30px;
             line-height: 1em;
@@ -181,6 +212,7 @@ html,body{
     &__about{
         margin-bottom: 110px;
         &__title{
+            font-family: 'PT Sans',sans-serif;
             margin-bottom: 90px;
         }
         &__columns{
@@ -193,6 +225,7 @@ html,body{
         }
         &__card{
             &__title{
+                font-family: 'PT Sans',sans-serif;
                 display: flex;
                 align-items: center;
                 &__icon{
@@ -222,6 +255,7 @@ html,body{
             padding: 100px 0;
         }
         &__title{
+            font-family: 'PT Sans',sans-serif;
             margin-bottom: 110px;
         }
         &__grid{
@@ -329,6 +363,7 @@ html,body{
             padding: 100px 0;
         }
         &__title{
+            font-family: 'PT Sans',sans-serif;
             color: @color-orange;
             margin-bottom: 20px;
         }
@@ -478,7 +513,7 @@ html,body{
             margin: 0;
             &__mobile-bg{
                 background-image: url('/dist/img/main-bg.jpg');
-                background-position: left bottom;
+                background-position: left top;
                 background-size: cover;
                 height: 250px;
             }
@@ -601,4 +636,7 @@ html,body{
             padding: 20px 0;
         }
     }
+}
+.color-orange{
+    color: @color-orange;
 }

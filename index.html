@@ -16,7 +16,9 @@
             <div class="wrapper header__wrapper">
                 <div class="header__container">
                     <div class="header__logo">
-                        <img src="dist/img/logo.svg" class="header__logo__image" alt="">
+                        <a href="/">
+                            <img src="dist/img/logo.svg" class="header__logo__image" alt="">
+                        </a>
                     </div>
                     <div class="header__nav">
                         <div class="header__menu">
@@ -37,7 +39,7 @@
                                         <input type="text" class="header__account__dropdown__input" placeholder="E-mail">
                                         <input type="text" class="header__account__dropdown__input" placeholder="Пароль">
                                         <div class="header__account__dropdown__actions">
-                                            <div class="button button--small">
+                                            <div class="button button--small button--outline button--small-bound">
                                                 Войти
                                             </div>
                                             <a href="#" class="link">Забыли пароль</a>
@@ -53,9 +55,12 @@
                                         <div class="header__account__dropdown__content">
                                             <input type="text" class="header__account__dropdown__input" placeholder="E-mail">
                                             <input type="text" class="header__account__dropdown__input" placeholder="Пароль">
+                                            <div class="header__account__dropdown__desc">
+                                                Регистрируясь вы соглашаетесь с условиями оферты и подтверждаете, что вам исполнилось 18 лет.
+                                            </div>
                                             <div class="header__account__dropdown__actions">
-                                                <div class="button button--small">
-                                                    Войти
+                                                <div class="button button--small button--outline button--small-bound">
+                                                    Отправить
                                                 </div>
                                                 <a href="#" class="link">Уже зарегистрированы</a>
                                             </div>
@@ -65,7 +70,7 @@
                         </div>
                     </div>
                     <div class="header__nav-mobile">
-                        <img src="dist/img/menu.png" alt="">
+                        <img src="dist/img/burger-menu.svg" alt="">
                     </div>
                 </div>
             </div>
@@ -79,11 +84,11 @@
                             <div class="main-page__preview__title">
                                 Записывайте<br>
                                 аудиокниги сами<br>
-                                и зарабатывайте!
+                                <b>и зарабатывайте!</b>
                             </div>
                             <div class="main-page__preview__description">
                                 Озвученные вами книги попадут в такие онлайн-сервисы и магазины,
-                                как ЛитРес, Ozon, MyBook и Звуки слов, а вы будете получать роялти с каждой продажи.
+                                как <u>ЛитРес</u>, <u>Ozon</u>, <u>MyBook</u> и <u>Звуки слов</u>, а вы будете получать роялти с каждой продажи.
                             </div>
                             <div class="main-page__preview__action">
                                 <div class="button button--large button--white">Попробовать</div>
@@ -96,7 +101,7 @@
                 <div class="wrapper">
                     <div class="main-page__about__container">
                         <div class="main-page__about__title">
-                            <div class="section-title">Попробуйте свои силы в проекте ЛитРес: Чтец!</div>
+                            <div class="section-title">Попробуйте свои силы в проекте ЛитРес: <span class="color-orange">Чтец!</span></div>
                         </div>
                         <div class="main-page__about__columns">
                             <div class="main-page__about__column">
@@ -337,7 +342,7 @@
                 <div class="wrapper">
                     <div class="main-page__you-resolve__container">
                         <div class="main-page__you-resolve__title">
-                            <div class="section-title">
+                            <div class="section-title color-orange">
                                 Решились? Зарегистрируйтесь,
                             </div>
                         </div>
