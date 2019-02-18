@@ -1,5 +1,7 @@
 class TemplateControls{
     init(){
+
+        // Потом как нибудь отрефачу
         const headerNavMobileControl = document.querySelector(".header__nav-mobile");
         const mobileMenu = new DropdownMenu({
             control: headerNavMobileControl,
@@ -26,6 +28,21 @@ class TemplateControls{
         const controlsGroup = [loginForm, registerForm];
         loginForm.state.group = controlsGroup;
         registerForm.state.group = controlsGroup;
+
+
+        const arrow = document.querySelector(".arrow-top");
+        window.addEventListener('scroll', (e) => {
+            if(window.pageYOffset > (window.innerHeight / 2)){
+                arrow.classList.add("active");
+            } else arrow.classList.remove("active");
+        });
+        arrow.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+
     }
 }
 class DropdownMenu{

@@ -268,7 +268,51 @@ html,body{
             flex-direction: column;
             align-items: center;
             &__icon{
+                position: relative;
+                padding: 10px;
                 margin-bottom: 30px;
+                width: 250px;
+                height: 250px;
+                background: white;
+                border-radius: 50%;
+                &__number{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 32px;
+                    color: @color-orange;
+                    font-weight: bold;
+                    background-image: url('/dist/img/top-circle.svg');
+                    background-size: 62px 62px;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    width: 70px;
+                    height: 70px;
+                    top: 5px;
+                    left: 5px;
+                    background-color: white;
+                    padding: 10px;
+                    border-radius: 50%;
+                    &--bottom{
+                        top: auto;
+                        bottom: 5px;
+                        background-image: url('/dist/img/bottom-circle.svg');
+                    }
+                }
+                &__container{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 10px;
+                    border-radius: 50%;
+                    border: 3px solid @color-orange;
+                    width: 100%;
+                    height: 100%;
+                }
+                &__image{
+                    width: 100px;
+                }
             }
             &__content{
                 font-size: 22px;
@@ -278,6 +322,11 @@ html,body{
     }
     &__our-friends{
         margin-bottom: 100px;
+        &:hover .tns-controls{
+            width: 120%;
+            left: -10%;
+            transition: ease 0.5s 0s;
+        }
         &__slider{
             &__container{
                 position: relative;
@@ -289,11 +338,12 @@ html,body{
                 & .tns-controls{
                     position: absolute;
                     top: 45%;
-                    width: 120%;
-                    left: -10%;
+                    left: -100%;
+                    width: 300%;
                     display: flex;
                     justify-content: space-between;
                     outline: none;
+                    transition: ease 0.5s 0.5s;
                     & .invert{
                         transform: rotate(180deg);
                     }
@@ -423,6 +473,14 @@ html,body{
             align-items: center;
             margin-right: 10px;
             cursor: pointer;
+            &__icon{
+                display: inline-block;
+                width: 36px;
+                height: 36px;
+                &:hover{
+                    background-position: -36px 0;
+                }
+            }
         }
     }
     &__menu{
@@ -453,6 +511,39 @@ html,body{
         }
     }
 }
+.arrow-top{
+    position: fixed;
+    display: flex;
+    bottom: 150px;
+    height: 0px;
+    width: 1110px;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: ease 0.3s;
+    cursor: pointer;
+    &__container{
+        position: fixed;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 0;
+        width: 1100px;
+    }
+    &__icon{
+        width: 80px;
+        height: 80px;
+        background: @color-orange;
+        border-radius: 50%;
+        background-image: url('/dist/img/arrow-top.svg');
+        background-size: 16px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    &.active{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 @media screen and (max-width: 1540px){
     .header{
         &__wrapper{
@@ -464,6 +555,15 @@ html,body{
         &__wrapper{
             padding: 0 10px;
             width: 100%;
+        }
+    }
+    .main-page{
+        &__our-friends{
+            &:hover .tns-controls{
+                width: 100%;
+                left: 0;
+                z-index: 2;
+            }
         }
     }
 }
@@ -616,6 +716,20 @@ html,body{
         
     }
     .main-page{
+        &__about{
+            &__card{
+                &__title{
+                    padding: 10px 0;
+                    border-bottom: 1px solid #d2d0c8;
+                }
+                &__content{
+                    display: none;
+                    &.active{
+                        display: block;
+                    }
+                }
+            }
+        }
         &__steps{
             &__grid{
                 grid-template-columns: repeat(1, 1fr);

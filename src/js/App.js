@@ -1,6 +1,7 @@
 import 'window'
 import mainPage from './MainPage'
 import templateControls from './TemplateControls'
+
 class App {
     init() {
         mainPage.init();

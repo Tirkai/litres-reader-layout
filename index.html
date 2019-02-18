@@ -48,25 +48,26 @@
                                 </div>
                             </div>
                             <div class="header__account__dropdown js-register-form">
-                                    <div class="header__account__dropdown__container">
-                                        <div class="header__account__dropdown__title">
-                                            Регистрация
+                                <div class="header__account__dropdown__container">
+                                    <div class="header__account__dropdown__title">
+                                        Регистрация
+                                    </div>
+                                    <div class="header__account__dropdown__content">
+                                        <input type="text" class="header__account__dropdown__input" placeholder="E-mail">
+                                        <input type="text" class="header__account__dropdown__input" placeholder="Пароль">
+                                        <div class="header__account__dropdown__desc">
+                                            Регистрируясь вы соглашаетесь с условиями оферты и подтверждаете, что вам
+                                            исполнилось 18 лет.
                                         </div>
-                                        <div class="header__account__dropdown__content">
-                                            <input type="text" class="header__account__dropdown__input" placeholder="E-mail">
-                                            <input type="text" class="header__account__dropdown__input" placeholder="Пароль">
-                                            <div class="header__account__dropdown__desc">
-                                                Регистрируясь вы соглашаетесь с условиями оферты и подтверждаете, что вам исполнилось 18 лет.
+                                        <div class="header__account__dropdown__actions">
+                                            <div class="button button--small button--outline button--small-bound">
+                                                Отправить
                                             </div>
-                                            <div class="header__account__dropdown__actions">
-                                                <div class="button button--small button--outline button--small-bound">
-                                                    Отправить
-                                                </div>
-                                                <a href="#" class="link">Уже зарегистрированы</a>
-                                            </div>
+                                            <a href="#" class="link">Уже зарегистрированы</a>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
                         </div>
                     </div>
                     <div class="header__nav-mobile">
@@ -88,7 +89,8 @@
                             </div>
                             <div class="main-page__preview__description">
                                 Озвученные вами книги попадут в такие онлайн-сервисы и магазины,
-                                как <u>ЛитРес</u>, <u>Ozon</u>, <u>MyBook</u> и <u>Звуки слов</u>, а вы будете получать роялти с каждой продажи.
+                                как <u>ЛитРес</u>, <u>Ozon</u>, <u>MyBook</u> и <u>Звуки слов</u>, а вы будете получать
+                                роялти с каждой продажи.
                             </div>
                             <div class="main-page__preview__action">
                                 <div class="button button--large button--white">Попробовать</div>
@@ -215,7 +217,14 @@
                         <div class="main-page__steps__grid">
                             <div class="main-page__steps__item">
                                 <div class="main-page__steps__item__icon">
-                                    <img src="dist/img/step-1.png" alt="">
+                                    <div class="main-page__steps__item__icon__container">
+                                        <div class="main-page__steps__item__icon__number">
+                                            1
+                                        </div>
+                                        <div class="main-page__steps__item__icon__image">
+                                            <img src="/dist/img/step-1.svg" alt="">
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="main-page__steps__item__content">
                                     <div class="button">
@@ -225,7 +234,14 @@
                             </div>
                             <div class="main-page__steps__item">
                                 <div class="main-page__steps__item__icon">
-                                    <img src="dist/img/step-2.png" alt="">
+                                    <div class="main-page__steps__item__icon__container">
+                                        <div class="main-page__steps__item__icon__number main-page__steps__item__icon__number--bottom">
+                                            2
+                                        </div>
+                                        <div class="main-page__steps__item__icon__image">
+                                            <img src="/dist/img/step-2.svg" alt="">
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="main-page__steps__item__content">
                                     Пройдите тестовое задание
@@ -233,7 +249,14 @@
                             </div>
                             <div class="main-page__steps__item">
                                 <div class="main-page__steps__item__icon">
-                                    <img src="dist/img/step-3.png" alt="">
+                                    <div class="main-page__steps__item__icon__container">
+                                        <div class="main-page__steps__item__icon__number">
+                                            3
+                                        </div>
+                                        <div class="main-page__steps__item__icon__image">
+                                            <img src="/dist/img/step-3.svg" alt="">
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="main-page__steps__item__content">
                                     Запишите 3 книги в период с 1 февраля по
@@ -242,7 +265,14 @@
                             </div>
                             <div class="main-page__steps__item">
                                 <div class="main-page__steps__item__icon">
-                                    <img src="dist/img/step-4.png" alt="">
+                                    <div class="main-page__steps__item__icon__container">
+                                        <div class="main-page__steps__item__icon__number main-page__steps__item__icon__number--bottom">
+                                            4
+                                        </div>
+                                        <div class="main-page__steps__item__icon__image">
+                                            <img src="/dist/img/step-4.svg" alt="">
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="main-page__steps__item__content">
                                     Лучших чтецов выберут жюри премии в декабре 2019 года
@@ -371,13 +401,13 @@
                             </div>
                             <div class="footer__social__items">
                                 <a href="#" class="footer__social__item">
-                                    <img src="dist/img/icon-fb.png" alt="">
+                                    <div class="footer__social__item__icon" style="background-image: url('/dist/img/fb.png')"></div>
                                 </a>
                                 <a href="#" class="footer__social__item">
-                                    <img src="dist/img/icon-vk.png" alt="">
+                                    <div class="footer__social__item__icon" style="background-image: url('/dist/img/vk.png')"></div>
                                 </a>
                                 <a href="#" class="footer__social__item">
-                                    <img src="dist/img/icon-instagram.png" alt="">
+                                    <div class="footer__social__item__icon" style="background-image: url('/dist/img/inst.png')"></div>
                                 </a>
                             </div>
                         </div>
@@ -395,6 +425,15 @@
                 </div>
             </div>
         </footer>
+        <div class="wrapper">
+            <div class="arrow-top">
+                <div class="arrow-top__container">
+                    <div class="arrow-top__icon">
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/min/tiny-slider.js"></script>
     <script src="dist/js/bundle.js"></script>
