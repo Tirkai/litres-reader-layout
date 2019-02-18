@@ -29,6 +29,7 @@
     "@babel/plugin-syntax-import-meta": "7.0.0-beta.54",
     "@babel/preset-env": "7.0.0-beta.54",
     "css-loader": "^1.0.0",
+    "express": "^4.16.4",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
@@ -41,6 +42,7 @@
     "gulp-rigger": "^0.5.8",
     "gulp-util": "^3.0.8",
     "mini-css-extract-plugin": "^0.4.1",
+    "node-static": "^0.7.11",
     "vinyl-ftp": "^0.6.1",
     "webpack": "^4.20.2"
   },
