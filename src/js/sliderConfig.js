@@ -1,9 +1,11 @@
 export default {
     items: 1,
-    slideBy: "page",
+    slideBy: 1,
     nav: true,
     touch: true,
     mouseDrag: true,
+    autoplay: true,
+    autoplayTimeout: 5000,
     autoplayButtonOutput: false,
     controlsText: [
         `<img src="dist/img/arrow-right.svg" class="invert">`,
